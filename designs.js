@@ -24,13 +24,13 @@ function makeGrid() {
     let tableHeight;
     let tableWidth;
     for (let x = 0; x < inputHeight.val(); x++) {
-        // for every row ==> height
+        // for every row which becomes the table height
         tableHeight = $("<tr>");
 
         table.append(tableHeight);
 
         for (let y = 0; y < inputWidth.val(); y++) {
-            // this is the table data ==> width   
+            // for every data which becomes the table width   
             tableWidth = $("<td>");
             //tableWidth.css("background-color", "rgb(255, 255, 255)");
             tableWidth.css({ backgroundColor: "rgb(255, 255, 255)" });
