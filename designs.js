@@ -9,9 +9,6 @@ const table = $("#pixelCanvas");
 const body = $("body");
 // const numInput = $("[type='number']");
 
-// Select reset button
-const resetBtn = $("#reset");
-
 // When size is submitted by the user, call makeGrid()
 const form = $("#sizePicker");
 
@@ -61,10 +58,6 @@ table.on("click", "td", function() {
 
 });
 
-// Reset the Grid
-resetBtn.on("click", function() {
-    table.empty();
-});
 
 // change the the color property of every child element within the body to 
 // value of color picker
