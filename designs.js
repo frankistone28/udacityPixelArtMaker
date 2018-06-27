@@ -5,9 +5,8 @@ const colorInput = $("#colorPicker");
 const inputHeight = $("#inputHeight");
 const inputWidth = $("#inputWidth");
 
-const table = $("#pixelCanvas");
-const body = $("body");
-// const numInput = $("[type='number']");
+const table = $("#pixelCanvas"); // select table element
+const body = $("body"); // select body element
 
 // When size is submitted by the user, call makeGrid()
 const form = $("#sizePicker");
@@ -32,7 +31,6 @@ function makeGrid() {
         for (let y = 0; y < inputWidth.val(); y++) {
             // for every data which becomes the table width   
             tableWidth = $("<td>");
-            //tableWidth.css("background-color", "rgb(255, 255, 255)");
             tableWidth.css({ backgroundColor: "rgb(255, 255, 255)" });
             tableHeight.append(tableWidth);
         };
@@ -40,24 +38,18 @@ function makeGrid() {
     // Reset the input value to 1
     inputHeight.val(1);
     inputWidth.val(1);
-
 }
 
 // Event delegation
 table.on("click", "td", function() {
-    //$(this).css("background-color", colorInput.val());
     let bgColor = $(this).css("background-color");
 
     if (bgColor === "rgb(255, 255, 255)") {
-        //$(this).css("background-color", colorInput.val());
         $(this).css({ backgroundColor: colorInput.val() });
     } else {
-        //$(this).css("background-color", "rgb(255, 255, 255)");
         $(this).css({ backgroundColor: "rgb(255, 255, 255)" });
     }
-
 });
-
 
 // change the the color property of every child element within the body to 
 // value of color picker
